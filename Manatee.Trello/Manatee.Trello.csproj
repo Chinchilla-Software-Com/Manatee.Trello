@@ -5,7 +5,7 @@
 	  <LangVersion>7.1</LangVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Description>A fully object-oriented .Net wrapper for the TrelloAPI.</Description>
-    <Version>3.10.4.1</Version>
+    <Version>3.10.4.2</Version>
     <Copyright>Copyright © 2018 Little Crab Solutions</Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageIconUrl></PackageIconUrl>
