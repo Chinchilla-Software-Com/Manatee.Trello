@@ -1,3 +1,4 @@
+@ECHO OFF
 REM build script for MyGet builds
 
 REM *** NOTE *** When running this locally, remove the quotes from around the executable variables (e.g. %GitPath%).
@@ -14,6 +15,9 @@ REM Restore packages
 call powershell "& .\nuget-restore.ps1"
 
 REM Detect MSBuild 15.0 path
+if exist "%programfiles(x86)%\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe" (
+	set msbuild="%programfiles(x86)%\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\MSBuild.exe"
+)
 if exist "%programfiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" (
 	set msbuild="%programfiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
 )
@@ -25,15 +29,15 @@ if exist "%programfiles(x86)%\Microsoft Visual Studio\2017\Enterprise\MSBuild\15
 )
 
 REM Run build
-call "%msbuild%" Manatee.Trello.sln /p:Configuration="%config%" /m:1 /v:m /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+call %msbuild% Manatee.Trello.sln /p:Configuration="%config%" /m:1 /v:m /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 if not "%errorlevel%"=="0" goto failure
 
 REM package
-call "%msbuild%" Manatee.Trello\Manatee.Trello.csproj /t:pack /p:Configuration="%config%"
+call %msbuild% Manatee.Trello\Manatee.Trello.csproj /t:pack /p:Configuration="%config%"
 if not "%errorlevel%"=="0" goto failure
 
 :success
-exit 0
+REM exit 0
 
 :failure
-exit -1 
+REM exit -1 

@@ -2,19 +2,20 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netstandard1.3;netstandard2.0</TargetFrameworks>
+	  <LangVersion>7.1</LangVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Description>A fully object-oriented .Net wrapper for the TrelloAPI.</Description>
-    <Version>3.10.3</Version>
+    <Version>3.10.4</Version>
     <Copyright>Copyright © 2018 Little Crab Solutions</Copyright>
-    <PackageLicenseUrl>https://github.com/gregsdennis/Manatee.Trello/blob/master/LICENSE.txt</PackageLicenseUrl>
-    <PackageIconUrl>https://github.com/gregsdennis/Manatee.Trello/blob/master/Resources/Manatee-Trello-Icon.png</PackageIconUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageIconUrl></PackageIconUrl>
     <PackageProjectUrl>https://gregsdennis.github.io/Manatee.Trello/</PackageProjectUrl>
     <PackageTags>api wrapper trello manatee</PackageTags>
-    <PackageReleaseNotes>Please see https://gregsdennis.github.io/Manatee.Trello/release-notes.html</PackageReleaseNotes>
+    <PackageReleaseNotes>Please see https://github.com/Chinchilla-Software-Com/Manatee.Trello/releases</PackageReleaseNotes>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>Manatee.Trello.snk</AssemblyOriginatorKeyFile>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <FileVersion>3.10.3.0</FileVersion>
+    <FileVersion>3.10.4.0</FileVersion>
     <Authors>gregsdennis</Authors>
     <Company>Little Crab Solutions</Company>
   </PropertyGroup>
@@ -30,7 +31,10 @@
 
   <PropertyGroup>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Manatee.Trello.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/gregsdennis/Manatee.Trello</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Chinchilla-Software-Com/Manatee.Trello</RepositoryUrl>
+    <PackageId>Manatee.Trello.Net</PackageId>
+    <PackageIcon>Manatee-Trello-Icon.png</PackageIcon>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
@@ -52,6 +56,14 @@
     <None Update="Emojis.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Emojis.generated.cs</LastGenOutput>
+    </None>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\Resources\Manatee-Trello-Icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 
