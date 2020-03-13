@@ -5,7 +5,7 @@
 	  <LangVersion>7.1</LangVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Description>A fully object-oriented .Net wrapper for the TrelloAPI.</Description>
-    <Version>3.10.4</Version>
+    <Version>3.10.4.1</Version>
     <Copyright>Copyright © 2018 Little Crab Solutions</Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageIconUrl></PackageIconUrl>
@@ -15,7 +15,7 @@
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>Manatee.Trello.snk</AssemblyOriginatorKeyFile>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <FileVersion>3.10.4.0</FileVersion>
+    <FileVersion>3.10.4.1</FileVersion>
     <Authors>gregsdennis</Authors>
     <Company>Little Crab Solutions</Company>
   </PropertyGroup>

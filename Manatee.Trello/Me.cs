@@ -95,7 +95,12 @@ namespace Manatee.Trello
 		}
 
 		internal Me(string id)
-			: base(id, true, TrelloAuthorization.Default)
+			: this(TrelloAuthorization.Default, id)
+		{
+		}
+
+		internal Me(TrelloAuthorization auth, string id)
+			: base(id, true, auth)
 		{
 			_email = new Field<string>(_context, nameof(Email));
 			Preferences = new MemberPreferences(_context.MemberPreferencesContext);
