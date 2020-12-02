@@ -20,6 +20,7 @@
     <Company>Little Crab Solutions</Company>
   </PropertyGroup>
 
+	<!--
   <PropertyGroup Condition="'$(TargetFramework)'=='net45'">
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -28,6 +29,7 @@
   <PropertyGroup Condition="'$(TargetFramework)'!='net45'">
     <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
   </PropertyGroup>
+	-->
 
   <PropertyGroup>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Manatee.Trello.xml</DocumentationFile>
